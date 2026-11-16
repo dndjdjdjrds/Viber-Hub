@@ -42,6 +42,7 @@ jobs:
           [System.IO.File]::WriteAllBytes("$PWD\source.tar.xz", $bytes)
           tar -xJf source.tar.xz
           if (!(Test-Path "DisVibe\desktop_disvibe.py")) { throw "DisVibe source extraction failed." }
+          Copy-Item ".build-source/requirements-build-windows.txt" "DisVibe/requirements-build.txt" -Force
 
       - name: Install build dependencies
         working-directory: DisVibe
