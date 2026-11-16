@@ -22,8 +22,6 @@ jobs:
         with:
           python-version: "3.12"
           architecture: "x64"
-          cache: pip
-          cache-dependency-path: DisVibe/requirements-build.txt
 
       - name: Reconstruct source archive
         shell: pwsh
